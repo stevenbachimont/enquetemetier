@@ -1,0 +1,96 @@
+body {
+  font-family:  Impact, Charcoal, sans-serif;
+  margin: 0 ;
+  padding: 10px;
+  background: #dac36a;
+  background-size: 100%;
+  animation: gradient 20s ease infinite;
+  height: 600vh;
+}
+
+
+.back a {
+  display: block;
+  background-color: #f5b8cb;
+  color: #dd9dd9;
+  padding: 10px 16px;
+  border-radius: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back a:hover {
+  background-color: rgba(255, 203, 136, 0.53);
+  color: #111113;
+}
+
+
+#box {
+  background-color: rgba(4, 72, 59, 0.4);
+  background-size: 100% 100%;
+}
+
+#app {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+#titre {
+  color: #7b5b7a;
+  font-size: 5vw;
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+#soustitre {
+  color: #1e1e1e;
+  font-size: 2vw;
+  font-family: Geneva, Verdana, sans-serif;
+}
+
+#titreQ1, #titreQ2, #titreQ3, #titreQ4  {
+  color: #0e0e0e;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+}
+
+
+
+form {
+  margin-bottom: 20px;
+}
+
+textarea {
+  padding: 2px;
+  border-radius: 4px;
+  width: 90%;
+  border: 1px solid rgba(38, 38, 26, 0.88);
+  background: rgba(186, 246, 240, 0.94);
+  resize: vertical;
+  font-family: 'Trebuchet MS', sans-serif;
+  margin: 0 5%;
+}
+
+button {
+  background-color: rgba(0, 131, 110, 0.39);
+  color: #000000;
+  padding: 10px 16px;
+  border-radius: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(0, 197, 159, 0.53);
+  color: #111113;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+results-container {
+  margin
+  p align="20px 10px";
+}
+
+
+

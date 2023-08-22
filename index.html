@@ -1,0 +1,164 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>stevenbachimont/enquête métier</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <link rel="apple-touch-icon" href="icon.png">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+</head>
+
+<body>
+<div>
+  <div id="app">
+    <div id="titre">
+      <div>
+        <h1>Enquête métier</h1>
+      </div>
+    </div>
+    <div id="soustitre">
+      <div>
+        <h2>Projet : Formation Developpeur Web et Web App</h2><br>
+        <p>Vous êtes développeur web ? En répondant à cette enquête, vous m'aidez à avoir un dossier solide pour mon projet de reconversion via le dispositif "transition pro".</p>
+        <p>Remplissez le formulaire ci-dessous puis terminez et vous pourrez ensuite soumettre par mail.</p>
+        <p>Durée : environ 10mn</p>
+        <p>Merci.</p>
+      </div>
+    </div>
+    <form>
+      <div id="box" data-aos="flip-right">
+        <div id="section-vous">
+          <div id="titreQ1">
+            <div>
+              <h2>Vous :</h2>
+            </div>
+          </div>
+          <div v-for="(question, index) in questions" :key="index">
+            <div id="titreQ1">
+              <h3>{{ question.title }}</h3>
+            </div>
+            <textarea v-model="answers[index]" rows="2" placeholder="Saisissez votre réponse ici"></textarea>
+          </div>
+          <br><br>
+        </div>
+      </div>
+      <div id="box" data-aos="flip-up">
+        <div id="section-entreprise">
+          <div id="titreQ2">
+            <div>
+              <h2>Dans votre entreprise :</h2>
+            </div>
+          </div>
+          <div v-for="(question, index) in Questions2" :key="index">
+            <div id="titreQ2">
+              <h3>{{ question.title }}</h3>
+            </div>
+            <textarea v-model="Answers2[index]" rows="2" placeholder="Saisissez votre réponse ici"></textarea>
+          </div>
+          <br><br>
+        </div>
+      </div>
+      <div id="box" data-aos="flip-down">
+        <div id="section-ressenti">
+          <div id="titreQ3">
+            <div>
+              <h2>Votre ressenti sur le métier :</h2>
+            </div>
+          </div>
+          <div v-for="(question, index) in Questions3" :key="index">
+            <div id="titreQ3">
+              <h3>{{ question.title }}</h3>
+            </div>
+            <textarea v-model="Answers3[index]" rows="2" placeholder="Saisissez votre réponse ici"></textarea>
+          </div>
+          <br><br>
+        </div>
+      </div>
+      <div id="box" data-aos="flip-left">
+        <div id="section-merci">
+          <div id="titreQ4">
+            <div>
+              <h2>Merci pour votre participation.</h2>
+            </div>
+          </div>
+          <div v-for="(question, index) in Questions4" :key="index">
+            <div id="titreQ4">
+              <h3>{{ question.title }}</h3>
+            </div>
+            <textarea v-model="Answers4[index]" rows="2" placeholder="Saisissez votre réponse ici"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <button @click.prevent="submitForm" data-aos="flip-left">Terminer</button>
+
+    </form>
+    <div v-if="showResults" class="results-container"data-aos="flip-down">
+
+      <h2>Vos réponses :</h2>
+      <ul>
+        <li v-for="(answer, index) in answers" :key="index">
+          <strong>{{ questions[index].title }}</strong>: {{ answer }}
+        </li>
+      </ul>
+
+      <ul>
+        <li v-for="(answer, index) in Answers2" :key="index">
+          <strong>{{ Questions2[index].title }}</strong>: {{ answer }}
+        </li>
+      </ul>
+
+      <ul>
+        <li v-for="(answer, index) in Answers3" :key="index">
+          <strong>{{ Questions3[index].title }}</strong>: {{ answer }}
+        </li>
+      </ul>
+      <ul>
+        <li v-for="(answer, index) in Answers4" :key="index">
+          <strong>{{ Questions4[index].title }}</strong>: {{ answer }}
+        </li>
+      </ul>
+
+      <button @click.prevent="submitByEmail" class="download-button"data-aos="flip-up">Soumettre par e-mail</button>
+    </div>
+  </div>
+  <canvas id="canvas"></canvas>
+</div>
+
+
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+</script>
+<script src='https://cdn.jsdelivr.net/npm/aos@2.3.0/dist/aos.js'></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+
+</html>

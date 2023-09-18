@@ -8,5 +8,5 @@ Et bien répondez à cette enquête métier pour soutenir ma démarche de reconv
 
 10 devs y ont répondu et je les en remerci.
 
-Je commence ma formation de dev web à la wild cod school en février 24..
+Je commence ma formation de dev web à la wild code school en février 24..
 J'ai hâte.
